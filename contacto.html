@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="scrolled">
+    <div class="logo">
+       <a href="index.html">
+        <img src="assets/images/Titan_Logo.png" alt="Titan Gym Logo">
+       </a> 
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+    <label for="menu-toggle" class="hamburger">
+        <i class="fas fa-bars"></i>
+      <i class="fas fa-bars"></i>
+    </label>
+    <nav>
+      <ul class="menu">
+           <li><a href="index.html" aria-label="Ir a Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+          <li class="dropdown">
+              <a href="clases.html"><i class="fas fa-dumbbell"></i> Clases</a>
+              <ul class="dropdown-menu">
+                  <li><a href="clases.html">Yoga</a></li>
+                  <li><a href="clases.html">Weightlifting</a></li>
+                  <li><a href="clases.html">CrossFit</a></li>
+                  <li><a href="clases.html">Spinning</a></li>
+              </ul>
+            </li>
+          <li><a href="entrenador.html" aria-label="Ver Instructores"><i class="fas fa-user"></i> Instructores</a></li>
+          <li><a href="precios.html" aria-label="Ver precios"><i class="fas fa-dollar-sign"></i> Precios</a></li>
+          <li><a href="contacto.html" aria-label="Ir a Contactos"><i class="fas fa-envelope"></i> Contactos</a></li>
+          <li><a href="blog.html" aria-label="Ver Blog"><i class="fas fa-blog"></i> Blog</a></li>
+      </ul>
+  </nav>
+    <button class="dark-mode-toggle" aria-label="Modo Oscuro">
+      <i class="fas fa-moon"></i> 
+  </button>
+</header>
+  <section class="container">
+    <div class="container-contacto">
+      <h1 class="titulo-color">¡Contactate con nosotros!</h1>
+      <p class="invitation">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required minlength="3" placeholder="Milagro Martinez" />
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required  placeholder="user@gmail.com"/>
+          </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" pattern="[0-9]{10,15}" placeholder="Ej: 3811234567" />
+          </div>
+          <div class="form-group">
+            <label>Motivo:</label>
+            <select name="motivo" required>
+              <option value="" disabled selected>Seleccione un motivo</option>
+              <option value="consulta">Consulta</option>
+              <option value="soporte">Soporte</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mensaje:</label>
+          <textarea name="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+      
+        <div class="form-group button-contact">
+          <div class="spinner" id="spinner"></div>
+          <button type="submit" aria-label="Enviar Formulario de Contacto">Enviar</button>
+        </div>
+      </form>      
+    </div>
+  </section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content button-contact">
+    <h3>¡Formulario enviado con éxito!</h3>
+    <p>Gracias por contactarnos.</p>
+    <button onclick="cerrarModal()" aria-label="Cerrar modal">Cerrar</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+      <div class="social-media">
+          <a href="index.html"><img src="assets/images/Titan_Logo.png" alt="Logo Titan Gym" class="logo-newsletter"></a>
+          <h3>Síguenos en:</h3>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+      <div class="newsletter">
+          <h3>Suscríbete a nuestro Newsletter</h3>
+          <form action="#" method="POST">
+              <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required aria-label="Campo de correo electrónico">
+              <button type="submit" aria-label="Enviar Formulario de Newsletter">Suscribirse</button>
+          </form>
+      </div>
+
+      <div class="map">
+          <h3>Encuéntranos aquí:</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4342.076864117405!2d-65.29816297269808!3d-24.187904184862365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1743898840077!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+  <p>&copy; 2025 Titan Gym. Todos los derechos reservados.</p>
+</footer>
+
+<script src="assets/js/modal.js"></script>
+<script src="assets/js/dark-mood.js"></script>
+
+</body>
+</html>
