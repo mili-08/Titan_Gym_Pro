@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/home.css">
-
+  <link rel="stylesheet" href="assets/css/clases.css">
 </head>
 
 <body id="clases">
@@ -58,181 +58,197 @@
     </nav>
   </header>
   <section class="grid-wrapper">
-      <input type="radio" id="todo" name="categoria" checked />
-      <input type="radio" id="musculacion" name="categoria" />
-      <input type="radio" id="crossfit" name="categoria" />
-      <input type="radio" id="yoga" name="categoria" />
-      <input type="radio" id="spinning" name="categoria" />
-
-      <div class="filtros">
-        <label for="todo">Todas</label>
-        <label for="musculacion">Musculación</label>
-        <label for="crossfit">CrossFit</label>
-        <label for="yoga">Yoga</label>
-        <label for="spinning">Spinning</label>
+    <div class="filtros mb-4">
+      <button class="btn btn-success btn-filter active" data-filter="*">Todas</button>
+      <button class="btn btn-success btn-filter" data-filter=".musculacion">Musculación</button>
+      <button class="btn btn-success btn-filter" data-filter=".crossfit">CrossFit</button>
+      <button class="btn btn-success btn-filter" data-filter=".yoga">Yoga</button>
+      <button class="btn btn-success btn-filter" data-filter=".spinning">Spinning</button>
+    </div>
+  
+    <div class="grid-container">
+      <div class="grid-item musculacion" aria-label="Clase de Musculación">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/30165877/pexels-photo-30165877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Musculación">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Musculación</div>
+              <div class="horario-overlay">Lunes, Miércoles, Viernes - 18:00 hs</div>
+          </div>
+        </div>
       </div>
-
-      <div class="grid-container">
-        <div class="grid-item musculacion" aria-label="Clase de Musculación">
-          <img src="https://images.pexels.com/photos/30165877/pexels-photo-30165877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Musculación">
-          <div class="overlay">
-            <div class="nombre-overlay">Musculación</div>
-            <div class="horario-overlay">Lunes, Miércoles, Viernes - 18:00 hs</div>
+  
+      <div class="grid-item spinning" aria-label="Clase de Spinning">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/12905809/pexels-photo-12905809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Spinning">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Spinning</div>
+              <div class="horario-overlay">Lunes y Jueves - 17:00 hs</div>
           </div>
         </div>
-
-        <div class="grid-item spinning" aria-label="Clase de Spinning">
-          <img src="https://images.pexels.com/photos/12905809/pexels-photo-12905809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Spinning">
-          <div class="overlay">
-            <div class="nombre-overlay">Spinning</div>
-            <div class="horario-overlay">Lunes y Jueves - 17:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item musculacion" aria-label="Clase de Musculación">
-          <img src="https://images.pexels.com/photos/30862926/pexels-photo-30862926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Musculación">
-          <div class="overlay">
-            <div class="nombre-overlay">Musculación</div>
-            <div class="horario-overlay">Sábados - 10:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item crossfit" aria-label="Clase de CrossFit">
-          <img src="https://img.freepik.com/fotos-premium/sesion-entrenamiento-crossfit-participantes-que-realizan-movimientos-funcionales-como-saltos-caja-cuerda_1314467-172310.jpg" alt="CrossFit">
-          <div class="overlay">
-            <div class="nombre-overlay">CrossFit</div>
-            <div class="horario-overlay">Martes y Jueves - 19:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item spinning" aria-label="Clase de Spinning">
-          <img src="assets/images/spinning.jpg" alt="Spinning">
-          <div class="overlay">
-            <div class="nombre-overlay">Spinning</div>
-            <div class="horario-overlay">Martes y Jueves - 18:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item musculacion tall" aria-label="Clase de Musculación">
-          <img src="assets/images/weightlifting.jpg" alt="Musculación">
-          <div class="overlay">
-            <div class="nombre-overlay">Musculación</div>
-            <div class="horario-overlay">Miercoles y Sabados - 17:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item yoga" aria-label="Clase de Yoga">
-          <img src="assets/images/yoga.jpg" alt="Yoga">
-          <div class="overlay">
-            <div class="nombre-overlay">Yoga</div>
-            <div class="horario-overlay">Lunes y Viernes - 10:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item musculacion" aria-label="Clase de Musculación">
-          <img src="https://images.pexels.com/photos/9361335/pexels-photo-9361335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Musculación">
-          <div class="overlay">
-            <div class="nombre-overlay">Musculación</div>
-            <div class="horario-overlay">Sábados - 10:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item yoga" aria-label="Clase de Yoga">
-          <img src="https://images.pexels.com/photos/29413755/pexels-photo-29413755/free-photo-of-mujer-joven-practicando-yoga-en-el-interior.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga">
-          <div class="overlay">
-            <div class="nombre-overlay">Yoga</div>
-            <div class="horario-overlay">Lunes a Viernes - 08:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item musculacion" aria-label="Clase de Musculación">
-          <img src="https://images.pexels.com/photos/29778851/pexels-photo-29778851/free-photo-of-hombre-fuerte-levantando-pesas-en-el-gimnasio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Musculación">
-          <div class="overlay">
-            <div class="nombre-overlay">Musculación</div>
-            <div class="horario-overlay">Sábados - 08:00 hs</div>
-          </div>
-        </div>
-
-        <div class="grid-item crossfit" aria-label="Clase de CrossFit">
-          <img src="https://img.freepik.com/foto-gratis/persona-haciendo-entrenamiento-crossfit_23-2149162340.jpg" alt="CrossFit">
-          <div class="overlay">
-            <div class="nombre-overlay">CrossFit</div>
-            <div class="horario-overlay">Martes y Jueves - 10:00 hs</div>
-          </div>
-        </div>
-
       </div>
-  </section>
-
-  <section class="grid-wrapper final">
-    <div class="tabla-horarios">
-      <h2>Horarios Semanales</h2>
-      <div class="tabla-scroll">
-        <table aria-label="Tabla de horarios de clases">
-          <thead>
-            <tr>
-              <th>Día</th>
-              <th>08:00</th>
-              <th>10:00</th>
-              <th>17:00</th>
-              <th>18:00</th>
-              <th>19:00</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Lunes</td>
-              <td>Yoga</td>
-              <td>Yoga</td>
-              <td>Spinning</td>
-              <td>Musculación</td>
-              <td>Musculación</td>
-            </tr>
-            <tr>
-              <td>Martes</td>
-              <td>Yoga</td>
-              <td>CrossFit</td>
-              <td></td>
-              <td>Spinning</td>
-              <td>CrossFit</td>
-            </tr>
-            <tr>
-              <td>Miércoles</td>
-              <td>Yoga</td>
-              <td>-</td>
-              <td>Musculación</td>
-              <td>Musculación</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Jueves</td>
-              <td>Yoga</td>
-              <td>CrossFit</td>
-              <td>Spinning</td>
-              <td>Spinning</td>
-              <td>CrossFit</td>
-            </tr>
-            <tr>
-              <td>Viernes</td>
-              <td>Yoga</td>
-              <td>Yoga</td>
-              <td></td>
-              <td>Musculación</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Sábado</td>
-              <td>Musculación</td>
-              <td>Musculación</td>
-              <td>Musculación</td>
-              <td>-</td>
-              <td>Musculación</td>
-            </tr>
-          </tbody>
-        </table>
+  
+      <div class="grid-item musculacion" aria-label="Clase de Musculación">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/30862926/pexels-photo-30862926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Musculación">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Musculación</div>
+              <div class="horario-overlay">Sábados - 10:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item crossfit" aria-label="Clase de CrossFit">
+        <div class="card h-100">
+          <img src="https://img.freepik.com/fotos-premium/sesion-entrenamiento-crossfit-participantes-que-realizan-movimientos-funcionales-como-saltos-caja-cuerda_1314467-172310.jpg" class="card-img-top" alt="CrossFit">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">CrossFit</div>
+              <div class="horario-overlay">Martes y Jueves - 19:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item spinning" aria-label="Clase de Spinning">
+        <div class="card h-100">
+          <img src="assets/images/spinning.jpg" class="card-img-top" alt="Spinning">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Spinning</div>
+              <div class="horario-overlay">Martes y Jueves - 18:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item musculacion tall" aria-label="Clase de Musculación">
+        <div class="card h-100">
+          <img src="assets/images/weightlifting.jpg" class="card-img-top" alt="Musculación">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Musculación</div>
+              <div class="horario-overlay">Miércoles y Sábados - 17:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item yoga" aria-label="Clase de Yoga">
+        <div class="card h-100">
+          <img src="assets/images/yoga.jpg" class="card-img-top" alt="Yoga">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Yoga</div>
+              <div class="horario-overlay">Lunes y Viernes - 10:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item musculacion" aria-label="Clase de Musculación">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/9361335/pexels-photo-9361335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Musculación">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Musculación</div>
+              <div class="horario-overlay">Sábados - 10:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item yoga" aria-label="Clase de Yoga">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/29413755/pexels-photo-29413755/free-photo-of-mujer-joven-practicando-yoga-en-el-interior.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Yoga">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Yoga</div>
+              <div class="horario-overlay">Lunes a Viernes - 08:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item musculacion" aria-label="Clase de Musculación">
+        <div class="card h-100">
+          <img src="https://images.pexels.com/photos/29778851/pexels-photo-29778851/free-photo-of-hombre-fuerte-levantando-pesas-en-el-gimnasio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Musculación">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">Musculación</div>
+              <div class="horario-overlay">Sábados - 08:00 hs</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="grid-item crossfit" aria-label="Clase de CrossFit">
+        <div class="card h-100">
+          <img src="https://img.freepik.com/foto-gratis/persona-haciendo-entrenamiento-crossfit_23-2149162340.jpg" class="card-img-top" alt="CrossFit">
+          <div class="card-body overlay">
+              <div class="nombre-overlay">CrossFit</div>
+              <div class="horario-overlay">Martes y Jueves - 10:00 hs</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+<section class="container mt-5 mb-5">
+  <div class="tabla-horarios">
+    <h2>Horarios Semanales</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center" aria-label="Tabla de horarios de clases">
+        <thead>
+          <tr class="verde-bg text-white">
+            <th>Día</th>
+            <th>08:00</th>
+            <th>10:00</th>
+            <th>17:00</th>
+            <th>18:00</th>
+            <th>19:00</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ver">Lunes</td=>
+            <td>Yoga</td>
+            <td>Yoga</td>
+            <td>Spinning</td>
+            <td>Musculación</td>
+            <td>Musculación</td>
+          </tr>
+          <tr>
+            <td>Martes</td>
+            <td>Yoga</td>
+            <td>CrossFit</td>
+            <td>-</td>
+            <td>Spinning</td>
+            <td>CrossFit</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>Yoga</td>
+            <td>-</td>
+            <td>Musculación</td>
+            <td>Musculación</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Jueves</td>
+            <td>Yoga</td>
+            <td>CrossFit</td>
+            <td>Spinning</td>
+            <td>Spinning</td>
+            <td>CrossFit</td>
+          </tr>
+          <tr>
+            <td>Viernes</td>
+            <td>Yoga</td>
+            <td>Yoga</td>
+            <td>-</td>
+            <td>Musculación</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>Musculación</td>
+            <td>Musculación</td>
+            <td>Musculación</td>
+            <td>-</td>
+            <td>Musculación</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+  
   <footer class="text-white py-4 text-center lila-bg mt-5 pt-5">
     <div class="container-fluid">
       <div class="row gy-4 justify-content-evenly text-md-start text-center">
@@ -285,6 +301,8 @@
   </footer>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="assets/js/home.js"></script>
+  <script src="assets/js/clases.js"></script>
 </body>
 </html>
