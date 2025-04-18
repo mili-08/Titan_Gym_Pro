@@ -1,0 +1,93 @@
+:root{
+    --color-verde: #A9FF38;
+    --color-lila: #6B00B6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.logo img {
+    width: 6rem;
+}
+
+.lila-bg{
+    background-color: var(--color-lila);
+}
+
+.lila-text{
+  color: var(--color-lila);
+}
+
+.verde-text{
+    color: var(--color-verde);
+}
+
+.verde-bg {
+  background-color: var(--color-verde);
+}
+
+.navbar-nav .nav-link, .navbar-nav .nav-link.active {
+    color: var(--color-verde);
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: blue;
+  }
+
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  @media (max-width: 576px) {
+    .min-vh-sm-60 {
+      min-height: 70vh !important;
+    }
+  }
+
+  .mega-menu .dropdown-item:hover {
+    background-color: var(--color-verde);
+    color: black;
+  }
+
+  #hero-content-text {
+    transition: opacity 1.5s ease-in-out; /* Transición suave para la animación */
+  }
+
+
+  /*CARDS*/
+
+  .card {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-text {
+    display: none;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+
+
+  /* carrusel */
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .name-user {
+    font-weight: bold;
+    color: #555;
+  }

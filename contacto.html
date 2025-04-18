@@ -5,41 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contactos</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
-  <header class="scrolled">
-    <div class="logo">
-       <a href="index.html">
-        <img src="assets/images/Titan_Logo.png" alt="Titan Gym Logo">
-       </a> 
-    </div>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
-    <label for="menu-toggle" class="hamburger">
-        <i class="fas fa-bars"></i>
-      <i class="fas fa-bars"></i>
-    </label>
-    <nav>
-      <ul class="menu">
-           <li><a href="index.html" aria-label="Ir a Inicio"><i class="fas fa-home"></i> Inicio</a></li>
-          <li class="dropdown">
-              <a href="clases.html"><i class="fas fa-dumbbell"></i> Clases</a>
-              <ul class="dropdown-menu">
-                  <li><a href="clases.html">Yoga</a></li>
-                  <li><a href="clases.html">Weightlifting</a></li>
-                  <li><a href="clases.html">CrossFit</a></li>
-                  <li><a href="clases.html">Spinning</a></li>
+  <header class="container-fluid lila-bg">
+    <nav class="navbar navbar-expand-lg lila-bg">
+      <div class="container-fluid">
+        <div class="d-flex flex-shrink-0 logo">
+          <a href="index.html" aria-label="Página de inicio - Titan Gym">
+            <img src="assets/images/Titan_Logo.png" alt="Titan Gym Logo" class="img-fluid">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav d-flex w-100 justify-content-evenly">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-dumbbell"></i> Clases
+              </a>
+              <!-- Mega Menu -->
+              <ul class="dropdown-menu mega-menu">
+                <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                <li><a class="dropdown-item" href="clases.html">Musculación</a></li>
+                <li><a class="dropdown-item" href="clases.html">Spinning</a></li>
+                <li><a class="dropdown-item" href="clases.html">CroosFit</a></li>
               </ul>
             </li>
-          <li><a href="entrenador.html" aria-label="Ver Instructores"><i class="fas fa-user"></i> Instructores</a></li>
-          <li><a href="precios.html" aria-label="Ver precios"><i class="fas fa-dollar-sign"></i> Precios</a></li>
-          <li><a href="contacto.html" aria-label="Ir a Contactos"><i class="fas fa-envelope"></i> Contactos</a></li>
-          <li><a href="blog.html" aria-label="Ver Blog"><i class="fas fa-blog"></i> Blog</a></li>
-      </ul>
-  </nav>
-    <button class="dark-mode-toggle" aria-label="Modo Oscuro">
-      <i class="fas fa-moon"></i> 
-  </button>
-</header>
+            <li class="nav-item">
+              <a class="nav-link" href="entrenadores.html"><i class="fas fa-user"></i> Instructores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="precios.html"><i class="fas fa-dollar-sign"></i> Planes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contactos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <section class="container">
     <div class="container-contacto">
       <h1 class="titulo-color">¡Contactate con nosotros!</h1>
@@ -93,33 +107,61 @@
   </div>
 </div>
 
-<footer>
-  <div class="footer-container">
-      <div class="social-media">
-          <a href="index.html"><img src="assets/images/Titan_Logo.png" alt="Logo Titan Gym" class="logo-newsletter"></a>
-          <h3>Síguenos en:</h3>
-          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      </div>
-      <div class="newsletter">
-          <h3>Suscríbete a nuestro Newsletter</h3>
-          <form action="#" method="POST">
-              <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required aria-label="Campo de correo electrónico">
-              <button type="submit" aria-label="Enviar Formulario de Newsletter">Suscribirse</button>
-          </form>
+<footer class="text-white py-4 text-center lila-bg mt-5 pt-5">
+  <div class="container-fluid">
+    <div class="row gy-4 justify-content-evenly text-md-start text-center">
+      
+      <!-- Redes Sociales (ahora ocupa menos espacio) -->
+      <div class="col-12 col-md-2">
+        <a href="index.html">
+          <img src="assets/images/Titan_Logo.png" alt="Logo Titan Gym" class="img-fluid mb-2" style="width: 100px;">
+        </a>
+        <h5 class="mt-3">Síguenos en:</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://twitter.com" class="text-decoration-none verde-text" target="_blank"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+          <li><a href="https://facebook.com" class="text-decoration-none verde-text" target="_blank"><i class="fab fa-facebook me-2"></i>Facebook</a></li>
+          <li><a href="https://instagram.com" class="text-decoration-none verde-text" target="_blank"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+        </ul>
       </div>
 
-      <div class="map">
-          <h3>Encuéntranos aquí:</h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4342.076864117405!2d-65.29816297269808!3d-24.187904184862365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1743898840077!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Newsletter (con validación Bootstrap + spinner jQuery) -->
+    <div class="col-12 col-md-3">
+      <h5 class="text-center">Suscríbete al Newsletter</h5>
+      <form id="newsletterForm" class="d-grid gap-2 needs-validation" novalidate>
+        <input type="email" class="form-control form-control-sm" placeholder="Correo electrónico" required aria-label="Correo">
+        <div class="invalid-feedback text-start">
+          Por favor, ingresa un correo válido.
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-2 verde-bg text-black" id="subscribeBtn">
+            <span id="btnText">Suscríbete</span>
+            <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  
+      <!-- Mapa (sin cambios) -->
+      <div class="col-12 col-md-4">
+        <h5 class="text-center">Encuéntranos aquí:</h5>
+        <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4342.076864117405!2d-65.29816297269808!3d-24.187904184862365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1743898840077!5m2!1ses-419!2sar"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
+    </div>
+
+    <!-- Texto inferior -->
+    <div class="mt-4">
+      <p class="text-secondary mb-0" style="font-size: 0.9rem;">&copy; 2025 Titan Gym. Todos los derechos reservados.</p>
+    </div>
   </div>
-  <p>&copy; 2025 Titan Gym. Todos los derechos reservados.</p>
 </footer>
 
 <script src="assets/js/modal.js"></script>
-<script src="assets/js/dark-mood.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/header.js"></script>
 
 </body>
 </html>
